@@ -2,6 +2,7 @@
 x = 5
 y = "john"
 m = n = 'a' # input value to many variable
+a1, b1, c1 = "Orange", "Banana", "Cherry" # give value to many variable
 print(type(x)) # use type() for output type of variable
 
 # case sensitive
@@ -25,6 +26,9 @@ def myfunc():
 myfunc()
 print('Python is ' + k) # this command will output global
 
+# but if you use declare global in function
+# it will output new value in function
+# because it global
 def my_function():
     global g
     g = "fantastic"
