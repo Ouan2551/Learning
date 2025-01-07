@@ -29,3 +29,12 @@ if "free" in txt:
 print("expensive" not in txt)
 if "expensive" not in txt:
     print("No, 'expensive' is NOT present.")
+    
+
+# Slicing Strings
+b = "Hello, World!"
+print(b[2:5]) # output code from index 2 to 5
+
+b = "Hello, World!"
+print(b[:5]) # output code from index 0 to 5
+# structure like start:stop (num_start:num_stop)
