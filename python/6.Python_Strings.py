@@ -34,7 +34,9 @@ if "expensive" not in txt:
 # Slicing Strings
 b = "Hello, World!"
 print(b[2:5]) # output code from index 2 to 5
+print(b[:5]) # output code from index start to 5
+print(b[5:]) # output code from index 5 to end
 
-b = "Hello, World!"
-print(b[:5]) # output code from index 0 to 5
+print(b[-2:-5]) # negative index (backward)
 # structure like start:stop (num_start:num_stop)
+# stop is index - 1 not real index use
