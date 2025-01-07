@@ -40,3 +40,6 @@ print(b[5:]) # output code from index 5 to end
 print(b[-2:-5]) # negative index (backward)
 # structure like start:stop (num_start:num_stop)
 # stop is index - 1 not real index use
+
+
+# Modify Strings
