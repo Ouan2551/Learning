@@ -43,3 +43,24 @@ print(b[-2:-5]) # negative index (backward)
 
 
 # Modify Strings
+a = " hello bro "
+b = "HELLO BRO"
+print(a.upper()) # Big font
+print(b.lower()) # Small font
+print(a.strip()) # Remove whitespace
+print(a.replace('e', 'o')) # (character_select, character_replace)
+print(a.split(",")) # select char to divide string
+
+# String concatenation (combine string)
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+c = a + ' ' + b
+
+# Format strings
+# from before we can not combine different data type together
+# but format() method can do this
+age = 15
+txt = f"I am {age}" # it can use for modify string and whatever
+print(txt)
