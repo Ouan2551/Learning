@@ -11,6 +11,8 @@ b = """today i will teach you how to cooking pasta
 and trick how to use pan"""
 print(b)
 
+#___________________________________________________
+
 # string is array
 # array is a room store value and reach by using index
 c = "Hello world"
@@ -29,7 +31,8 @@ if "free" in txt:
 print("expensive" not in txt)
 if "expensive" not in txt:
     print("No, 'expensive' is NOT present.")
-    
+
+#___________________________________________________
 
 # Slicing Strings
 b = "Hello, World!"
@@ -41,6 +44,7 @@ print(b[-2:-5]) # negative index (backward)
 # structure like start:stop (num_start:num_stop)
 # stop is index - 1 not real index use
 
+#___________________________________________________
 
 # Modify Strings
 a = " hello bro "
@@ -58,9 +62,37 @@ c = a + b
 print(c)
 c = a + ' ' + b
 
+#___________________________________________________
+
 # Format strings
 # from before we can not combine different data type together
 # but format() method can do this
 age = 15
 txt = f"I am {age}" # it can use for modify string and whatever
+print(txt)
+# using '{}' to add word in sentences
+# (need 'f' front of sentences you want to transform)
+
+txt = f"The price is {20 * 59} dollars"
+print(txt)
+# or using calculate in '{}'
+
+price = 59
+txt = f"The price is {price:.2f} dollars"
+print(txt)
+# output number with decimal using ':' and '.' follow variable
+
+# Escape Characters
+# Code	Result
+# \'	Single Quote	
+# \\	Backslash	
+# \n	New Line	
+# \r	Carriage Return	
+# \t	Tab	
+# \b	Backspace	
+# \f	Form Feed	
+# \ooo	Octal value	
+# \xhh	Hex value
+# example
+txt = "Hello \"I am black dog\"" # output txt with double quote
 print(txt)
