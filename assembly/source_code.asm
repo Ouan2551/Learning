@@ -1,16 +1,16 @@
 section .data
-    message db "Hello, world!", 10  ; Define a message string
+    msg db "Hello, World!", 0
 
 section .text
     global _start
 
 _start:
-    mov rax, 1        ; System call number for write
-    mov rdi, 1        ; File descriptor 1 (stdout)
-    mov rsi, message   ; Address of the message string
-    mov rdx, 13       ; Length of the message string
-    syscall           ; Invoke the system call
+    mov eax, 4          ; syscall number for write
+    mov ebx, 1          ; file descriptor (stdout)
+    mov ecx, msg        ; address of the message
+    mov edx, 13         ; length of the message
+    int 0x80            ; make the system call
 
-    mov rax, 60       ; System call number for exit
-    mov rdi, 0        ; Exit code 0 (success)
-    syscall           ; Invoke the system call
+    mov eax, 1          ; syscall number for exit
+    xor ebx, ebx        ; exit code 0
+    int 0x80            ; make the system call
