@@ -1,16 +1,14 @@
 section .data
-    msg db "Hello, World!", 0
-
+    message db 'Hello, world!', 0Ah ; ข้อความที่จะแสดง
 section .text
     global _start
-
 _start:
-    mov eax, 4          ; syscall number for write
-    mov ebx, 1          ; file descriptor (stdout)
-    mov ecx, msg        ; address of the message
-    mov edx, 13         ; length of the message
-    int 0x80            ; make the system call
+    mov eax, 4 ; system call number for write
+    mov ebx, 1 ; file descriptor (stdout)
+    mov ecx, message ; address of string to write
+    mov edx, 13 ; number of bytes to write
+    int 0x80 ; call kernel
 
-    mov eax, 1          ; syscall number for exit
-    xor ebx, ebx        ; exit code 0
-    int 0x80            ; make the system call
+    mov eax, 1 ; system call number for exit
+    mov ebx, 0 ; exit status
+    int 0x80
