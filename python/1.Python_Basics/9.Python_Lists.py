@@ -44,3 +44,19 @@ tropical = ["mango", "pineapple", "papaya"]
 This_list.extend(tropical) # insert another list in to member list
 print(This_list)
 
+# Remove List Items
+This_list.remove("mango") # use "remove()" to remove member
+# but if have many same value it will delete first member
+This_list.pop(6) # use "pop()"  remove by using index
+This_list.pop() # remove last member in list
+print(This_list)
+
+del This_list[-1] # remove member
+This_list.clear() # remove list
+print(This_list)
+del This_list # clear list
+
+# Loop list
+This_list = ["apple", "banana", "cherry"]
+for i in This_list:
+    print(i)
