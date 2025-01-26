@@ -60,3 +60,25 @@ del This_list # clear list
 This_list = ["apple", "banana", "cherry"]
 for i in This_list:
     print(i)
+    
+# List Comprehension => just short syntax
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+new_list = [x for x in fruits if "a" in x]
+# append member have character 'a' to new_list
+print(new_list)
+
+# Sort list => use ".sort()"
+This_list = ["orange", "mango", "kiwi", "pineapple", "banana"]
+Num_list = [5, 10, 1, 3, 9]
+This_list.sort()
+Num_list.sort()
+print(This_list)
+print(Num_list)
+
+# reverse sort => inside ".sort()" use "reverse = True"
+This_list.sort(reverse = True)
+Num_list.sort(reverse = True)
+print(This_list)
+print(Num_list)
+# is have a lot of function to use with "key=" but this is e.g.
+This_list.sort(key = str.lower)
