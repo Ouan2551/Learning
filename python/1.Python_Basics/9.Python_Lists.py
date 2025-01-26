@@ -82,3 +82,11 @@ print(This_list)
 print(Num_list)
 # is have a lot of function to use with "key=" but this is e.g.
 This_list.sort(key = str.lower)
+
+# Copy list => use ".copy()" or use "list()" or use ":"
+copy_list = This_list.copy()
+copy_list1 = list(This_list)
+copy_list2 = This_list[:]
+print(copy_list)
+print(copy_list1)
+print(copy_list2)
