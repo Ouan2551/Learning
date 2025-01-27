@@ -90,3 +90,12 @@ copy_list2 = This_list[:]
 print(copy_list)
 print(copy_list1)
 print(copy_list2)
+
+# Join list => use '+' operator or ".extend()"
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+list1.extend(list2) # extend use for join list not declare new list
+print(list3)
+print(list1)
