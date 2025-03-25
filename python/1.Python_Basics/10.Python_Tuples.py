@@ -34,3 +34,4 @@ this_tuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 print(this_tuple[-4:-1])
 if "apple" in this_tuple:
     print("have apple text in this tuple")
+    
