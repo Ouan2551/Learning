@@ -1,6 +1,6 @@
 # python collections arrays have 4 collecting data types
-# 1. list => change and order allow duplicate members
-# 2.Tuple = can't change value allow duplicate members
+# 1. list => change and order allow duplicate members use '[]'
+# 2.Tuple = can't change value allow duplicate members use '()'
 # 3.Set => unordered and unchanged no duplicate members
 # 4. Dictionary => like list no duplicate members
 
@@ -60,7 +60,7 @@ del This_list # clear list
 This_list = ["apple", "banana", "cherry"]
 for i in This_list:
     print(i)
-    
+
 # List Comprehension => just short syntax
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 new_list = [x for x in fruits if "a" in x]
