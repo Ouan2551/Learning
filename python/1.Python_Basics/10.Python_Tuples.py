@@ -20,5 +20,17 @@ print(type(this_tuple))
 tuple1 = ("hello", 50, True, 'a')
 
 # tuple constructor
-this_tuple = tuple(("banana", "apple", "grape")) # don't forget 2 round brackets
+this_tuple = tuple(("banana", "apple", "grape", "papaya")) # don't forget 2 round brackets
 print(this_tuple)
+
+# Access tuple 0 for first value
+print(this_tuple[1]) # use index
+# negative index
+print(this_tuple[-1]) # use -1 for last value
+# range of index
+print(this_tuple[0:2]) # in last number 2 it like this <2 but not like this <= 2
+print(this_tuple[:2])
+this_tuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(this_tuple[-4:-1])
+if "apple" in this_tuple:
+    print("have apple text in this tuple")
