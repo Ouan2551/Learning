@@ -35,3 +35,25 @@ print(this_tuple[-4:-1])
 if "apple" in this_tuple:
     print("have apple text in this tuple")
     
+
+# Change value tuples (convert tuple to list and then change value after that change back to tuple)
+this_list = list(this_tuple)
+this_list[0] = "monkey" # change value using index
+this_tuple = tuple(this_list)
+
+# Add value
+this_list = list(this_tuple)
+this_list.append("Hello") # this method convert to list before
+this_tuple = tuple(this_list)
+add_tuple = ("watermelon", ) # add tuple to tuple
+this_tuple += add_tuple
+print(this_tuple)
+
+# Delete value
+this_list = list(this_tuple)
+this_list.remove("Hello") # this method convert to list before
+this_tuple = tuple(this_list)
+print(this_tuple)
+# or delete all of tuple by this method
+del this_tuple
+print(this_tuple) # get error because you delete tuple before
