@@ -74,3 +74,17 @@ print("list f2 : ", f2)
 print("type list f2 : ", type(f2))
 print(f3) # f3 will always be last value
 
+# loop tuples
+fruits = ("apple", "banana", "cherry", "mango", "watermelon", "lemon")
+print("__________for_loop__________")
+# for loop
+for i in fruits:
+    print("fruit : ",i)
+for i in range(len(fruits)): # look like in c++ like this for(int i; i <= fruits.size(); i++)
+    print(fruits[i])
+print("__________while_loop__________")
+# while loop
+i = 0
+while i < len(fruits):
+    print(fruits[i])
+    i += 1
