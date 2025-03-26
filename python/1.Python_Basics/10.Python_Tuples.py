@@ -12,7 +12,7 @@ print(len(this_tuple))
 this_tuple = ("apple",) # have comma then python recognize this is tuple
 print(type(this_tuple))
 
-#NOT a tuple (not have comma)
+# not tuple (not have comma)
 this_tuple = ("apple")
 print(type(this_tuple))
 
@@ -56,4 +56,21 @@ this_tuple = tuple(this_list)
 print(this_tuple)
 # or delete all of tuple by this method
 del this_tuple
-print(this_tuple) # get error because you delete tuple before
+# print(this_tuple) # get error because you delete tuple 
+
+# unpack tuples
+fruits = ("apple", "banana", "cherry")
+# extract value to variable
+f1, f2, f3 = fruits
+print(f1)
+print(f2)
+print(f3)
+# using "Asterisk*" => if number of variable is less than value in tuple add '*'
+# to front of variable and then this variable will be list
+fruits = ("apple", "banana", "cherry", "mango", "watermelon", "lemon")
+f1, *f2, f3 = fruits
+print(f1)
+print("list f2 : ", f2)
+print("type list f2 : ", type(f2))
+print(f3) # f3 will always be last value
+
