@@ -88,3 +88,22 @@ i = 0
 while i < len(fruits):
     print(fruits[i])
     i += 1
+    
+# join tuples
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+# multiply tuples
+fruits = ("apple", "banana", "cherry")
+my_tuple = fruits * 2 # double value in tuples
+print(my_tuple)
+
+# return how much value in tuples using count
+# (put everything you want to count it over there)
+print("count apple text : ", my_tuple.count("apple"))
+
+# search in tuple for value and return index (where value live)
+print("location apple text : ", my_tuple.count("apple"))
