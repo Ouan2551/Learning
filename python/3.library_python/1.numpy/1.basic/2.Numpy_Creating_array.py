@@ -1,5 +1,5 @@
 import numpy as np
-# creat array using array()
+# create array using array()
 arr = np.array(['a', 'b', 'c']) # like convert list to array
 # you can convert whatever to array e.g. list, dictionary, tuples
 print(type(arr))
