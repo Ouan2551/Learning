@@ -16,19 +16,20 @@
 ; mnemonic is instruction tell program to do something
 
 ; examples
-section.text
-    global _start ;declare for linker
+; 2.asm_basic_syntax.asm - Windows 64-bit version using printf
 
-_start: ; tell linker entry point
-    mov edx,len ; message length
-    mov ecx,msg ; message to write
-    mov edx,1 ; file descriptor
-    mov eax,4 ; system call number (write)
-    int 0x80 ; call kernel
-
-    mov eax,1 ; system call number (exit)
-    int 0x80 ;call kernel
+default rel
 
 section .data
-msg db 'Hello world', 0xa ; string to write
-len equ $ - msg ; length of string
+    msg db "Hello, world", 0xa, 0
+    ; NULL-terminated string for printf
+
+section .text
+    global main
+    extern printf
+
+main:
+    lea rcx, [msg]      ; first argument (Windows x64 uses rcx)
+    call printf         ; call C printf
+    mov eax, 0
+    ret

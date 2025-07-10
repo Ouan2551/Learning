@@ -31,7 +31,7 @@ int main()
     // using %zu because it design for using with sizeof() but some computer 
     // can use with %d but more safer when using %zu
 
-    // type conversion
+    // type conversion => convert data types
     
     return 0;
 }
