@@ -32,6 +32,13 @@ int main()
     // can use with %d but more safer when using %zu
 
     // type conversion => convert data types
-    
-    return 0;
+    int x = 5, y = 2;
+    {
+        int result = x/y; printf("%d\n", result);
+    }
+    {
+        float result = (float) x/y; printf("%f\n", result);
+    }
+    // use block {} for using same variable but different data type
+        return 0;
 }
