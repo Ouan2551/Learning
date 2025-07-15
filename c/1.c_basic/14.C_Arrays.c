@@ -11,7 +11,12 @@ int main()
     }
 
     // array size (byte)
-    printf("array size : ");printf("%d\n", sizeof(nums));
-    printf("array elements count : ");printf("%d\n", sizeof(nums)/sizeof(nums[0]));
+    printf("array size : ");printf("%zu\n", sizeof(nums));
+    printf("array elements count : ");printf("%zu\n", sizeof(nums)/sizeof(nums[0]));
+
+    // multidimensional arrays
+    int matrix[2][2] = {{1,2}, {3,4}}; //2d arrays
+    printf("matrix[0][1] : %d\n", matrix[0][1]);
+    
     return 0;
 }
