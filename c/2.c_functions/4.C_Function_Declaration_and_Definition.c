@@ -12,6 +12,7 @@ int main()
 void functions1() // full function over there but declare above main() function
 {
     printf("Hello Bro\n");
+    functions2(50, 100); // functions calling another functions
 }
 
 void functions2(int x, int y)
