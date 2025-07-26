@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-plt.style.use(r'D:\Important files Nannaphat\coding\Learning\Machine_learning\1.Supervised_machine_learning\1.deeplearning.mplstyle')
+plt.style.use(r'D:\Important files Nannaphat\coding\Learning\Machine_learning\1.Supervised_machine_learning\deeplearning.mplstyle')
 
 # example this is house prize / area
 x_train = np.array([1.0, 2.0])
