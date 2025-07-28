@@ -6,6 +6,7 @@ from lab_utils_uni import plt_house_x, plt_contour_wgrad, plt_divergence, plt_gr
 x_train = np.array([1.0, 2.0])
 y_train = np.array([300.0, 500.0])
 
+# Cost function => measure how far the predictions from true values
 def compute_cost(x, y, w, b):
     m = x.shape[0]
     cost = 0
@@ -17,6 +18,7 @@ def compute_cost(x, y, w, b):
     
     return total_cost
 
+# Gradient Calculation => computes the partial derivatives
 def compute_gradient(x, y, w, b): 
     """
     Computes the gradient for linear regression 
@@ -45,12 +47,12 @@ def compute_gradient(x, y, w, b):
     
     return dj_dw, dj_db
 
+# visualization gradient field
 plt_gradients(x_train,y_train, compute_cost, compute_gradient)
 plt.show()
 
 
-# Gradient_descent => find optimal values of and on the training data.
-
+# Gradient_descent => find optimal values of and on the training data. (update w and b)
 def gradient_descent(x, y, w_in, b_in, alpha, num_iters, cost_function, gradient_function): 
     """
     Performs gradient descent to fit w,b. Updates w,b by taking 
@@ -131,10 +133,9 @@ fig, ax = plt.subplots(1,1, figsize=(12, 6))
 plt_contour_wgrad(x_train, y_train, p_hist, ax)
 
 fig, ax = plt.subplots(1,1, figsize=(12, 4))
-plt_contour_wgrad(x_train, y_train, p_hist, ax, w_range=[180, 220, 0.5], b_range=[80, 120, 0.5],
-            contours=[1,5,10,20],resolution=0.5)
+plt_contour_wgrad(x_train, y_train, p_hist, ax, w_range=[180, 220, 0.5], b_range=[80, 120, 0.5], contours=[1,5,10,20],resolution=0.5)
 
-# increase learning rate
+# increase learning rate => example of using large learning rate value
 # initialize parameters
 w_init = 0
 b_init = 0
