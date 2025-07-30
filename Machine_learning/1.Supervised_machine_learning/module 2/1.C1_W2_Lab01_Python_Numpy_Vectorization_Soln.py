@@ -64,4 +64,28 @@ def my_dot(a, b):
 print(my_dot(a, b)) # using normal loops
 print(np.dot(a, b)) # vectorization
 
+print("___________________________________")
+
 # Matrix
+a = np.zeros((1, 5)) # 1 rows 5 columns                    
+print(f"a shape = {a.shape}, a = {a}")                     
+
+a = np.zeros((2, 1)) # 2 rows 1 columns                                                
+print(f"a shape = {a.shape}, a = {a}") 
+
+a = np.random.random_sample((2, 5)) # 2 rows 5 columns
+print(f"a shape = {a.shape}, a = {a}") 
+
+a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) # 3 rows 3 columns
+print(f"a shape = {a.shape}, a = {a}")
+
+# Indexing
+a = np.arange(6); print(a)
+# using -1 mean let numpy calculate rows by yourself
+a = np.arange(6).reshape(-1, 2); print(a)
+a = np.arange(12).reshape(6, -1); print(a)
+print(a[2,1])
+
+# Slicing
+# warning stop is like index -1 before
+a = np.arange(start=1, stop=200, step=2).reshape(-1, 1); print(a)
