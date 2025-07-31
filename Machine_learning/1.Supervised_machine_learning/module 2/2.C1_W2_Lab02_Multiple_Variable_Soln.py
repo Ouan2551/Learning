@@ -28,9 +28,9 @@ def predict_single_loop(x, w, b):
     n = x.shape[0]
     p = 0
     for i in range(n):
-        p_i = x[i] * w[i]  
-        p = p + p_i         
-    p = p + b                
+        p_i = x[i] * w[i]
+        p = p + p_i
+    p = p + b
     return p
 
 x_vectors = X_train[0, :]
@@ -44,7 +44,7 @@ def predict(x, w, b):
     Args:
         x (ndarray): Shape (n,) example with multiple features
         w (ndarray): Shape (n,) model parameters   
-        b (scalar):             model parameter 
+        b (scalar):             model parameter
 
     Returns:
         p (scalar):  prediction
