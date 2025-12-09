@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    // use "const" for variable that you not want to change data types
+    // use "const" for made that variable can't change the value
     const int my_num = 15;
     return 0;
 }
