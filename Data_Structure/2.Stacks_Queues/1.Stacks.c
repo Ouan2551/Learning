@@ -24,17 +24,58 @@ bool peek(Stack *stack, int *item);
 int main()
 {
     // LFIO => last in first out
-    Stack *stack = create_stack(0);
+    Stack *stack = create_stack(5);
 
     if (stack == NULL)
     {
         printf("Error creating stack.\n"); return 1; // return 1 to terminal that it have something wrong
     }
+    // ----------------------------------------------------------------------------------------------------
     if (is_empty(stack) == true)
     {
         printf("Stack is empty.\n");
     }
     // if (is_empty(stack)) printf("Stack is empty\n");
+
+    // ----------------------------------------------------------------------------------------------------
+
+    push(stack, 1);
+    printf("Stack size: %d\n", stack->size);
+    push(stack, 2); push(stack, 3); push(stack, 4); push(stack, 5);
+    printf("Stack size: %d\n", stack->size);
+
+    if (is_full(stack) == true)
+    {
+        printf("Stack is full.\n");
+    }
+
+    bool try_push = push(stack, 6);
+    if (try_push == false) printf("Push failed.\n");
+
+    // ----------------------------------------------------------------------------------------------------
+
+    int peek_value = 0;
+    peek(stack, &peek_value);
+
+    printf("Peek value : %d\n", peek_value);
+
+    // ----------------------------------------------------------------------------------------------------
+
+    int pop_value = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        pop(stack, &pop_value);
+        printf("Pop_value : %d\n", pop_value);
+    }
+
+    // ----------------------------------------------------------------------------------------------------
+    bool try_pop = pop(stack, &pop_value);
+    if (try_pop == false) printf("Pop failed. \n");
+
+    // ----------------------------------------------------------------------------------------------------
+    bool try_peek = peek(stack, &peek_value);
+    if (try_peek == false) printf("Peek failed. \n");
+    // ----------------------------------------------------------------------------------------------------
     destroy_stack(stack);
 }
 
@@ -80,4 +121,30 @@ bool is_full(Stack *stack)
 bool is_empty(Stack *stack)
 {
     return stack->size == 0;
+}
+
+bool push(Stack *stack, int item)
+{
+    if (is_full(stack) == true)
+    {
+        return false;
+    }
+    stack->collection[stack->size] = item;
+    stack->size++;
+    return true;
+}
+
+bool peek(Stack *stack, int *item)
+{
+    if (is_empty(stack) == true) return false;
+    *item = stack->collection[stack->size -1];
+    return true;
+}
+
+bool pop(Stack *stack, int *item)
+{
+    if (is_empty(stack)) return false;
+    stack->size--; // pop function modification top of stock
+    *item = stack->collection[stack->size];
+    return true;
 }
