@@ -6,7 +6,7 @@ class Node:
 
     def __str__(self):
         return str(self.data)
- 
+
 
 class LinkedList:
     def __init__(self):
